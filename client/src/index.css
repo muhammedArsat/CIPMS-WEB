@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+@theme{
+    --font-primary:"Inter";
+    --color-primary-light:#7B2CBF;
+    --color-primary-light-hover:#6C22A6;
+    --color-primary-light-active:#581C87;
+
+    --color-primary-dark:#C77DFF;
+    --color-primary-dark-hover:#B15EFF;
+    --color-primary-dark-active:#9D4EDD;
+
+    --color-success-light:#2D9F6F;
+    --color-success-light-hover:#23875B;
+    --color-success-light-active:#186146;
+
+    --color-success-dark:#4ADE80;
+    --color-success-dark-hover:#22C55E;
+    --color-success-dark-active:#16A34A;
+
+    --color-warning-light:#F59E0B;
+    --color-warning-light-hover:#D97706;
+    --color-warning-light-active:#B45309;
+
+    --color-warning-dark:#FBBF24;
+    --color-warning-dark-hover:#F59E0B;
+    --color-warning-dark-active:#D97706;
+
+    --color-danger-light:#DC2626;
+    --color-danger-light-hover:#B91C1C;
+    --color-danger-light-active:#991B1B;
+
+    --color-danger-dak:#F87171;
+    --color-danger-dak-hover:#EF4444;
+    --color-danger-dak-active:#DC2626;
+
+    --color-border-light:#E5E7EB;
+    --color-border-dark:#363636;
+    --color-muted-dark:#e5e5e5;
+    --color-muted-light:#404040;
+    --color-dark : #2f2f2f
+}
+@layer base {
+
+    html{
+    @apply font-primary
+  }
+
+
+   /* Use for Main page purpose What this page is about Only ONE per page Top of the page */
+   h1 {
+    @apply text-4xl md:text-5xl font-extrabold;
+  }
+  
+  /* Main sections of a page */
+  h2 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  /* use it for subsections like card titles, sections break downs */
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  /* use it for label and Group headings like Group titles inside the cards, form sections  */
+  h4 {
+    @apply text-xl font-semibold;
+  }
+
+  /* normal context text use it for descriptions, explanation,paragraph content */
+  p {
+    @apply text-base font-normal leading-relaxed;
+  }
+
+
+  /* use it for metadata purposes like posted ago,hints,timestamps */
+  small {
+    @apply text-sm text-muted-light dark:text-muted-dark ;
+  }
+
+  button{
+    @apply bg-primary-light dark:bg-primary-dark text-white p-2 rounded-md cursor-pointer
+  }
+
+ 
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side,#7B2CBF 90%,#0000);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+    20%{background-position:0%   0%, 50%  50%,100%  50%}
+    40%{background-position:0% 100%, 50%   0%,100%  50%}
+    60%{background-position:0%  50%, 50% 100%,100%   0%}
+    80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
