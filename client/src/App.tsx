@@ -1,11 +1,15 @@
-import React from 'react'
-
+import React from "react";
+import Routes from "./routes";
+import Logo from "./assets/Logo";
+import ThemeProvider from "./providers/ThemeProvider";
 const App = () => {
   return (
     <div>
-      <h1>Bismillah</h1>
+      <ThemeProvider>
+        <Routes />
+      </ThemeProvider>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

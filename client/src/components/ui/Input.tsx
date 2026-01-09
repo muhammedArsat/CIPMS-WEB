@@ -16,7 +16,7 @@ interface InputProps
 }
 
 const baseInput =
-  "w-full bg-transparent outline-none outline-primary disabled:opacity-50 disabled:cursor-not-allowed";
+  "w-full bg-transparent rounded-full outline-none outline-primary disabled:opacity-50 disabled:cursor-not-allowed";
 
 const sizeStyles: Record<InputSize, string> = {
   sm: "text-sm py-2",
@@ -52,7 +52,7 @@ const Input = ({
       <div
         className={cn(
           "relative flex items-center",
-          variant === "outlined" && "border rounded-md focus-within:ring-2",
+          variant === "outlined" && "border border-border-light dark:border-border-dark rounded-lg focus-within:ring-2",
           variant === "underline" &&
             "border-b focus-within:border-primary-light",
           error
@@ -73,6 +73,7 @@ const Input = ({
              "pl-3",
             isPassword ? "pr-10" : "pr-3",
             className
+            
           )}
           {...props}
         />

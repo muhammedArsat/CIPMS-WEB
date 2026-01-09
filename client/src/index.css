@@ -10,7 +10,7 @@
     --color-primary-light-hover:#6C22A6;
     --color-primary-light-active:#581C87;
 
-    --color-primary-dark:#C77DFF;
+    --color-primary-dark:#6C22A6;
     --color-primary-dark-hover:#B15EFF;
     --color-primary-dark-active:#9D4EDD;
 
@@ -34,9 +34,9 @@
     --color-danger-light-hover:#B91C1C;
     --color-danger-light-active:#991B1B;
 
-    --color-danger-dak:#F87171;
-    --color-danger-dak-hover:#EF4444;
-    --color-danger-dak-active:#DC2626;
+    --color-danger-dark:#F87171;
+    --color-danger-dark-hover:#EF4444;
+    --color-danger-dark-active:#DC2626;
 
     --color-border-light:#E5E7EB;
     --color-border-dark:#363636;
@@ -89,6 +89,11 @@
  
 }
 
+body.dark {
+background-color: #1f1f1f;
+color: #ffffff;
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
   width: 60px;
@@ -106,4 +111,10 @@
     40%{background-position:0% 100%, 50%   0%,100%  50%}
     60%{background-position:0%  50%, 50% 100%,100%   0%}
     80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
+
+*{
+
+  box-sizing: border-box;
+
 }
